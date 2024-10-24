@@ -2,6 +2,7 @@ package IT.Nico.TelBot;
 
 import IT.Nico.TelBot.model.CurrencyModel;
 import IT.Nico.TelBot.service.CurrencyService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -13,12 +14,12 @@ import java.io.IOException;
 import java.text.ParseException;
 
 @Service
-//@AllArgsConstructor
+@AllArgsConstructor
 public class TelegramBot extends TelegramLongPollingBot {
-    @Autowired
+    /*@Autowired
     TelegramBot(BotConfig botConfig){
         this.botConfig = new BotConfig();
-    }
+    }*/
     private  BotConfig botConfig;
 
     @Override
@@ -40,7 +41,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
 
             switch (messageText){
-                case "/start":
+                case "/s":
                     startCommandReceived(chatId, update.getMessage().getChat().getFirstName());
                     break;
                 default:
@@ -50,8 +51,8 @@ public class TelegramBot extends TelegramLongPollingBot {
                     } catch (IOException e) {
                         sendMessage(chatId, "We have not found such a currency." + "\n" +
                                 "Enter the currency whose official exchange rate" + "\n" +
-                                "you want to know in relation to BYN." + "\n" +
-                                "For example: USD");
+                                "you want to know in relation to RUB." + "\n" +
+                                "For example: EUR");
                     } catch (ParseException e) {
                         throw new RuntimeException("Unable to parse date");
                     }
@@ -61,10 +62,10 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     }
     private void startCommandReceived(Long chatId, String name) {
-        String answer = "Hi, " + name + ", nice to meet you!" + "\n" +
+        String answer = "Привет, " + name + ", nice to meet you!" + "\n" +
                 "Enter the currency whose official exchange rate" + "\n" +
-                "you want to know in relation to BYN." + "\n" +
-                "For example: USD";
+                "you want to know in relation to RUB." + "\n" +
+                "For example: EUR";
         sendMessage(chatId, answer);
     }
 
