@@ -47,7 +47,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
                     return;
                 }
 
-                sendMessage(chatId, "Генерирую 3D-модель... Подождите ⏳");
+                sendMessage(chatId, "Генерирую 3D-модель... Подождите  пож. ⏳");
 
                 // Запрос к Luma AI API
                 String response = lumaAiService.generate3DModel(prompt);
