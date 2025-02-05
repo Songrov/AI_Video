@@ -1,16 +1,13 @@
 package Entity;
 /*
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;*/
+
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @EntityScan
 public class User {
 
    // @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private Long chatId;
@@ -47,4 +44,9 @@ public class User {
     public void setChatId(Long chatId) {
         this.chatId = chatId;
     }
+
 }
+
+
+
+ */

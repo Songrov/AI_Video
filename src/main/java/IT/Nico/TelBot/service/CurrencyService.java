@@ -1,6 +1,6 @@
 package IT.Nico.TelBot.service;
 
-import IT.Nico.TelBot.model.CurrencyModel;
+/*import IT.Nico.TelBot.model.CurrencyModel;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class CurrencyService {
 
     public static String getCurrencyRate(String message, CurrencyModel model) throws IOException, ParseException {
-        URL url = new URL("https://api.frankfurter.app/latest" + message + "?amount=100&from=EUR&to=USD");
+        URL url = new URL("luma-a25f4e10-8952-4f54-b75c-651fd6c2eb7b-c51e0790-9fd2-4e22-91d2-d32e9f283aaa" + message + "rrnbrbrb");
         Scanner scanner = new Scanner((InputStream) url.getContent());
         String result = "";
         while (scanner.hasNext()){
@@ -39,3 +39,5 @@ public class CurrencyService {
         return new SimpleDateFormat("dd MMM yyyy").format(model.getDate());
     }
 }
+
+*/

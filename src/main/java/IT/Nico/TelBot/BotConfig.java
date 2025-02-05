@@ -13,6 +13,8 @@ public class BotConfig {
     String botName = "IT_Nico_bot";
     @Value("${telegram.bot.token}")
     String token = "7815802972:AAHnNPIXRgSZbgxcRmJ4M4qAuIF4NRyEoiI";
+
+
+
+
 }
-
-

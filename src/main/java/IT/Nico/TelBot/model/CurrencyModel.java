@@ -13,3 +13,5 @@ public class CurrencyModel {
     String cur_Name;
     Double cur_TelBot;
 }
+
+
