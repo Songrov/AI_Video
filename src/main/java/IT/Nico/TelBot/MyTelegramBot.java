@@ -32,7 +32,6 @@ public class MyTelegramBot extends TelegramLongPollingBot {
         return "7815802972:AAHnNPIXRgSZbgxcRmJ4M4qAuIF4NRyEoiI";
    }
 
-// luma-481dc24a-8f63-41b6-9dd8-bf0cebc55a27-cba679e9-7d43-4b01-8a93-e61e54056d04
 
     @Override
     public void onUpdateReceived(Update update) {
